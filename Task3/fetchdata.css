@@ -1,0 +1,18 @@
+#box{
+    margin-top: 60px;
+    margin-left: 400px;
+}
+#search{
+    width: 400px;
+    height: 30px;
+    border: 2px solid orange;
+    border-radius: 5px;
+}
+button{
+    height: 30px;
+    border: 2px solid rgb(186, 70, 130);
+    border-radius: 5px;
+}
+body{
+    background: linear-gradient(90deg,linen,rgb(138, 138, 223));
+}
