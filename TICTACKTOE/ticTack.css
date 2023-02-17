@@ -1,0 +1,42 @@
+/* #box{
+    margin-top: 30px;
+    wid
+    margin-left: 300px;
+    border: 2px solid blue;
+} */
+
+table{
+    /* border: 2px solid rebeccapurple; */
+    border-collapse: collapse;
+    margin-top: 100px;
+    margin-left: 450px;
+    width: 300px;
+    height: 300px;
+    table-layout: fixed;
+    
+}
+tr{
+    min-width: none;
+    min-height: min-content;
+    overflow: hidden;
+}
+
+td{
+    
+    border: 3px solid rgb(142, 103, 232);
+    border-radius: 20px;
+    height: 100px;
+    text-align: center;
+    font-size: 50px;
+    color: blueviolet;
+}
+#restart{
+    margin-left: 530px;
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    border-color: blueviolet;
+    color:rgb(211, 255, 255);
+    background-color: rgb(195, 168, 233);
+    font-size: 20px;
+}
