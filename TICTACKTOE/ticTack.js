@@ -1,4 +1,5 @@
 const restart = document.getElementById("restart");
+const win = document.getElementById("win")
 restart.addEventListener("click",()=>{
     // location.reload();
     b1.innerText=""
@@ -10,6 +11,7 @@ restart.addEventListener("click",()=>{
     b7.innerText=""
     b8.innerText=""
     b9.innerText=""
+    win.innerText=""
     flag=0
 })
 
@@ -25,7 +27,7 @@ const b8 = document.getElementById("8")
 const b9 = document.getElementById("9")
 let flag =0;
 b1.addEventListener("click",()=>{
-    if(b1.innerText=="X"||b1.innerText=="O"){
+    if(b1.innerText=="X"||b1.innerText=="O" || win.innerText!=""){
         b1.removeEventListener("click")
     }
     if(flag==0){
@@ -35,9 +37,10 @@ b1.addEventListener("click",()=>{
         flag = 0;
         b1.innerText = "O"
     }
+    winner()
 })
 b2.addEventListener("click",()=>{
-    if(b2.innerText=="X"||b2.innerText=="O"){
+    if(b2.innerText=="X"||b2.innerText=="O" || win.innerText!=""){
         b2.removeEventListener("click")
     }
     if(flag==0){
@@ -47,9 +50,10 @@ b2.addEventListener("click",()=>{
         b2.innerText = "O"
         flag = 0;
     }
+    winner()
 })
 b3.addEventListener("click",()=>{
-    if(b3.innerText=="X"||b3.innerText=="O"){
+    if(b3.innerText=="X"||b3.innerText=="O" || win.innerText!=""){
         b3.removeEventListener("click")
     }
     if(flag==0){
@@ -59,9 +63,10 @@ b3.addEventListener("click",()=>{
         b3.innerText = "O"
         flag = 0;
     }
+    winner()
 })
 b4.addEventListener("click",()=>{
-    if(b4.innerText=="X"||b4.innerText=="O"){
+    if(b4.innerText=="X"||b4.innerText=="O" || win.innerText!=""){
         b4.removeEventListener("click")
     }
     if(flag==0){
@@ -71,9 +76,10 @@ b4.addEventListener("click",()=>{
         b4.innerText = "O"
         flag = 0;
     }
+    winner()
 })
 b5.addEventListener("click",()=>{
-    if(b5.innerText=="X"||b5.innerText=="O"){
+    if(b5.innerText=="X"||b5.innerText=="O" || win.innerText!=""){
         b5.removeEventListener("click")
     }
     if(flag==0){
@@ -83,9 +89,10 @@ b5.addEventListener("click",()=>{
         b5.innerText = "O"
         flag = 0;
     }
+    winner()
 })
 b6.addEventListener("click",()=>{
-    if(b6.innerText=="X"||b6.innerText=="O"){
+    if(b6.innerText=="X"||b6.innerText=="O"  || win.innerText!=""){
         b6.removeEventListener("click")
     }
     if(flag==0){
@@ -95,9 +102,10 @@ b6.addEventListener("click",()=>{
         b6.innerText = "O"
         flag = 0;
     }
+    winner()
 })
 b7.addEventListener("click",()=>{
-    if(b7.innerText=="X"||b7.innerText=="O"){
+    if(b7.innerText=="X"||b7.innerText=="O" || win.innerText!=""){
         b7.removeEventListener("click")
     }
     if(flag==0){
@@ -107,9 +115,10 @@ b7.addEventListener("click",()=>{
         b7.innerText = "O"
         flag = 0;
     }
+    winner()
 })
 b8.addEventListener("click",()=>{
-    if(b8.innerText=="X"||b8.innerText=="O"){
+    if(b8.innerText=="X"||b8.innerText=="O" || win.innerText!=""){
         b8.removeEventListener("click")
     }
     if(flag==0){
@@ -119,9 +128,10 @@ b8.addEventListener("click",()=>{
         b8.innerText = "O"
         flag = 0;
     }
+    winner()
 })
 b9.addEventListener("click",()=>{
-    if(b9.innerText=="X"||b9.innerText=="O"){
+    if(b9.innerText=="X"||b9.innerText=="O" || win.innerText!=""){
         b9.removeEventListener("click")
     }
     if(flag==0){
@@ -131,5 +141,16 @@ b9.addEventListener("click",()=>{
         b9.innerText = "O"
         flag = 0;
     }
+    winner()
 })
+function winner(){
+    if((b1.innerText==="X" && b2.innerText=="X" && b3.innerText=="X" )|| (b1.innerText==="X" && b4.innerText=="X" && b7.innerText=="X") || (b1.innerText==="X" && b5.innerText=="X" && b9.innerText=="X") || (b2.innerText==="X" && b5.innerText==="X" && b8.innerText==="X") || (b3.innerText==="X" && b6.innerText==="X" && b9.innerText==="X") || (b3.innerText==="X" && b5.innerText==="X" && b7.innerText ==="X") || ((b2.innerText==="X" && b5.innerText==="X" && b8.innerText==="X") || (b3.innerText==="X" && b6.innerText==="X" && b9.innerText==="X") || b4.innerText==="X" && b5.innerText==="X" && b6.innerText ==="X" || (b2.innerText==="X" && b5.innerText==="X" && b8.innerText==="X") || (b3.innerText==="X" && b6.innerText==="X" && b9.innerText==="X") || (b7.innerText==="X" && b8.innerText==="X" && b9.innerText ==="X"))){
+        win.innerText = "Player 1 won the game"
+        remove()
+    }else if(b1.innerText==="O" && b2.innerText=="O" && b3.innerText=="O" || b1.innerText==="O" && b4.innerText=="O" && b7.innerText=="O" || b1.innerText==="O" && b5.innerText=="O" && b9.innerText=="O" || (b2.innerText==="O" && b5.innerText==="O" && b8.innerText==="O") || (b3.innerText==="O" && b6.innerText==="O" && b9.innerText==="O") || (b3.innerText==="O" && b5.innerText==="O" && b7.innerText ==="O") || ((b2.innerText==="O" && b5.innerText==="O" && b8.innerText==="O") || (b3.innerText==="O" && b6.innerText==="O" && b9.innerText==="O") || b4.innerText==="O" && b5.innerText==="O" && b6.innerText ==="O" || (b2.innerText==="O" && b5.innerText==="O" && b8.innerText==="O") || (b3.innerText==="O" && b6.innerText==="O" && b9.innerText==="O") || (b7.innerText==="O" && b8.innerText==="O" && b9.innerText ==="O"))){
+        win.innerText = "Player 2 won the game"        
+    }else if(b1.innerText!=""&&b2.innerText!=""&&b3.innerText!=""&&b4.innerText!=""&&b5.innerText!=""&&b6.innerText!=""&&b7.innerText!=""&&b8.innerText!=""&&b9.innerText!=""){
+        win.innerText = "Draw" 
+    }
+}
 

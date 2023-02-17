@@ -4,11 +4,13 @@
     margin-left: 300px;
     border: 2px solid blue;
 } */
-
+body{
+    background: linear-gradient(90deg,rgb(245, 245, 194),pink);
+}
 table{
     /* border: 2px solid rebeccapurple; */
     border-collapse: collapse;
-    margin-top: 100px;
+    margin-top: 50px;
     margin-left: 450px;
     width: 300px;
     height: 300px;
@@ -28,15 +30,20 @@ td{
     height: 100px;
     text-align: center;
     font-size: 50px;
-    color: blueviolet;
+    color: rgb(12, 173, 108);
 }
 #restart{
     margin-left: 530px;
     width: 150px;
     height: 50px;
     border-radius: 50px;
-    border-color: blueviolet;
+    border-color: rgb(43, 153, 226);
     color:rgb(211, 255, 255);
     background-color: rgb(195, 168, 233);
     font-size: 20px;
+}
+
+h2,h1{
+    margin-left: 500px;
+    color: rgb(79, 12, 235);
 }
